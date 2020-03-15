@@ -1,0 +1,118 @@
+<Widgets>:
+    # settemp_obj: temp
+    # settime_obj: time
+    # setdate_obj: date
+    # setimage_obj: image
+    # setday_obj: day
+    # sethumidity_obj: humidity
+    # setdescription_obj: description
+    # setnews_obj: news
+    # settemp: temp.text
+    # settime: time.text
+    # setdate: date.text
+    # setimage: image
+    # setday: day.text
+    # sethumidity: humidity.text
+    # setdescription: description.text
+    # setnews: news.text
+    AnchorLayout:
+        anchor_x: "left"
+        anchor_y: "top"
+        GridLayout:
+            rows: 3
+            padding: 15
+            size_hint: (1, 0.3)
+            BoxLayout:
+                orientation: 'horizontal'
+                size_hint: (1, 0.3)
+                Label:
+                    text: ""
+                    id: temp
+                    text_size: self.size
+                    font_size: 70
+                    size_hint: (0.1, 1)
+                    halign: "left"
+                    valign: "top"
+                Image:
+                    source: 'assets\\black.png'
+                    id: image
+                    allow_stretch: True
+                    keep_ratio: True
+                    size_hint: (0.1, 1)
+                    pos_hint: {'left': 1}
+                    width: temp.width
+                    height: temp.width/self.image_ratio
+                Label:
+                    text: ""
+                    size_hint: (1, 1)
+            Label:
+                text: ""
+                id: description
+                text_size: self.size
+                font_size: 30
+                size_hint: (1, 0.2)
+                halign: "left"
+                valign: "top"
+            Label:
+                text: ""
+                id: humidity
+                text_size: self.size
+                font_size: 30
+                size_hint: (1, 0.2)
+                halign: "left"
+                valign: "top"
+
+
+
+    AnchorLayout:
+        anchor_x: "right"
+        anchor_y: "top"
+        GridLayout:
+            rows: 3
+            padding: 10
+            size_hint: (1, 0.22)
+            # BoxLayout:
+            #     orientation: 'horizontal'
+            Label:
+                text: ""
+                id: time
+                text_size: self.size
+                font_size: 60
+                size_hint: (1, 0.3)
+                halign: "right"
+                valign: "top"
+                # Image:
+                #     source: None
+                #     size: (100, 100)
+                #     halign: "left"
+                #     valign: "top"
+            Label:
+                text: ""
+                id: day
+                text_size: self.size
+                font_size: 30
+                size_hint: (1, 0.2)
+                halign: "right"
+                valign: "top"
+            Label:
+                text: ""
+                id: date
+                text_size: self.size
+                font_size: 30
+                size_hint: (1, 0.2)
+                halign: "right"
+                valign: "top"
+
+    AnchorLayout:
+        anchor_x: "center"
+        anchor_y: "bottom"
+        padding: 25
+        Label:
+            text: ""
+            id: news
+            font_size: 40
+            halign: "center"
+            valign: "bottom"
+            text_size: self.width, None
+            size_hint: 1, None
+            height: self.texture_size[1]
